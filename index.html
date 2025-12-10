@@ -116,7 +116,7 @@
           </a>
         </div>
         
-        <p class="mt-6 text-xs text-gray-500 flex items-center gap-2">
+        <p class="mt-6 text-xs text-gray-500 flex items-center gap-2 pb-10 md:pb-0">
           <span class="iconify text-brand-gold" data-icon="ri:checkbox-circle-fill"></span>
           Stock disponible en Lima y envíos a provincia
         </p>
@@ -131,7 +131,7 @@
         <div class="md:w-1/2">
           <h2 class="text-3xl font-black text-brand-black mb-6">¿Sabes qué protege realmente a tu producto?</h2>
           <p class="text-gray-600 mb-6 leading-relaxed">
-            Muchos productores pierden lotes enteros por elegir la tapa incorrecta. En <strong>TAPI MUNDO</strong> no solo vendemos tapas, vendemos ingeniería de conservación[cite: 1, 49].
+            Muchos productores pierden lotes enteros por elegir la tapa incorrecta. En <strong>TAPI MUNDO</strong> no solo vendemos tapas, vendemos ingeniería de conservación
           </p>
           
           <div class="space-y-4">
@@ -139,7 +139,7 @@
               <div class="mt-1"><span class="iconify text-2xl text-brand-gold" data-icon="ri:drop-fill"></span></div>
               <div>
                 <h4 class="font-bold text-lg">Liner Estándar</h4>
-                <p class="text-sm text-gray-500">Ideal para productos de rotación rápida. Cierre hermético básico y económico. Perfecto para jugos, aguas y lácteos[cite: 71, 80].</p>
+                <p class="text-sm text-gray-500">Ideal para productos de rotación rápida. Cierre hermético básico y económico. Perfecto para jugos, aguas y lácteos.</p>
               </div>
             </div>
             <div class="flex gap-4 p-4 border-l-4 border-brand-gold bg-gray-50 shadow-md">
@@ -224,7 +224,7 @@
           </div>
           <h3 class="text-xl font-bold mb-2">Corchos Aglomerados</h3>
           <p class="text-gray-400 text-sm mb-6 h-20 overflow-hidden">
-            Compromiso ecológico sin sacrificar calidad. No se desmoronan y son perfectos para sellado manual o semiautomático[cite: 25, 26].
+            Compromiso ecológico sin sacrificar calidad. No se desmoronan y son perfectos para sellado manual o semiautomático].
           </p>
           <ul class="text-xs text-gray-500 mb-6 space-y-2">
             <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Sostenible</li>
@@ -352,33 +352,60 @@
     <span class="iconify text-3xl" data-icon="ri:whatsapp-fill"></span>
   </a>
 
-  <div id="sales-toast" class="hidden fixed bottom-24 right-6 bg-brand-white border-l-4 border-brand-gold p-4 shadow-2xl rounded-sm z-40 max-w-xs items-center gap-3">
-    <div class="bg-brand-gold/20 p-2 rounded-full text-yellow-700">
+  <div id="sales-toast" class="hidden fixed bottom-24 right-4 left-4 md:left-auto md:w-80 bg-brand-white border-l-4 border-brand-gold p-4 shadow-2xl rounded-sm z-40 items-center gap-3">
+    <div class="bg-brand-gold/20 p-2 rounded-full text-yellow-700 shrink-0">
       <span class="iconify text-lg" data-icon="ri:notification-3-fill"></span>
     </div>
-    <div>
-      <p class="text-xs font-bold text-brand-black">Último pedido despachado</p>
-      <p class="text-[10px] text-gray-600">Cliente de <span class="font-bold">Ica</span> compró 5 millares de <span class="font-bold">Tapas Pilfer</span>.</p>
-    </div>
-  </div>
+    <div class="flex-1" id="toast-content">
+      </div>
+    <button onclick="document.getElementById('sales-toast').style.display='none'" class="text-brand-black/50 hover:text-brand-black transition-colors shrink-0 p-1 -mr-2 -mt-2">
+        <span class="iconify text-sm" data-icon="ri:close-line"></span>
+    </button>
+</div>
 
   <script>
-    // Lógica para el Toast de Ventas
     const toast = document.getElementById('sales-toast');
+    const toastContent = document.getElementById('toast-content');
     
-    // Aparece a los 3 segundos de entrar
-    setTimeout(() => {
+    // Lista de eventos de ventas simuladas: [Ciudad, Producto, Tiempo de aparición (ms)]
+    const salesEvents = [
+        { city: 'Ica', product: '5 millares de Tapas Pilfer', time: 3000 },
+        { city: 'Arequipa', product: 'Corchos Aglomerados (Lote)', time: 9500 }, // 9.5 segundos
+        { city: 'Lima', product: 'Tapa Pilfer 30x60 Saranex', time: 17000 } // 17 segundos
+    ];
+
+    // Función principal para mostrar el toast
+    const showToast = (city, product) => {
+      // 1. Inyectar contenido
+      toastContent.innerHTML = `
+        <p class="text-xs font-bold text-brand-black">Último pedido despachado</p>
+        <p class="text-[10px] text-gray-600">Cliente de <span class="font-bold">${city}</span> compró <span class="font-bold">${product}</span>.</p>
+      `;
+      
+      // 2. Mostrar con animación
       toast.classList.remove('hidden');
       toast.classList.add('toast-active');
       
-      // Desaparece 5 segundos después
+      // 3. Auto-ocultar después de 3 segundos
       setTimeout(() => {
         toast.style.opacity = '0';
         toast.style.transform = 'translateY(20px)';
         toast.style.transition = 'all 0.5s ease';
-      }, 5000);
-    }, 3000);
-  </script>
+        
+        // 4. Ocultar completamente para no interferir con la siguiente animación
+        setTimeout(() => {
+            toast.style.display = 'none';
+            toast.classList.remove('toast-active');
+            toast.style.opacity = '1'; /* Resetear opacidad para la próxima vez */
+            toast.style.transform = 'translateY(100%)'; /* Resetear posición para la próxima vez */
+        }, 500); 
+      }, 3000); // Se oculta a los 3 segundos de su aparición
+    };
 
-</body>
-</html>
+    // Programar todos los eventos
+    salesEvents.forEach(event => {
+        setTimeout(() => {
+            showToast(event.city, event.product);
+        }, event.time);
+    });
+  </script>
