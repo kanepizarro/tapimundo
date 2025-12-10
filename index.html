@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png">
+  <meta name="description" content="TAPI MUNDO: Tapas Pilfer, Corchos y Soluciones de Sellado para la industria de licores y alimentos en Perú.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#0D0D0D',
+              white: '#F2F2F2',
+              gold: '#FCBD02',
+              goldHover: '#e5ac02',
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Ajustes Mobile-First */
+    * { -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    
+    /* Patrón de fondo sutil para secciones oscuras */
+    .bg-pattern {
+      background-image: radial-gradient(#FCBD02 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.05;
+    }
+
+    /* Animación Toast Persuasivo */
+    @keyframes slideInUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .toast-active {
+      display: flex !important;
+      animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+  <title>TAPI MUNDO | Soluciones de Sellado Premium</title>
+</head>
+<body class="bg-brand-white text-brand-black antialiased">
+
+  <div class="bg-brand-gold text-brand-black text-[10px] md:text-xs font-bold py-2 px-4 text-center sticky top-0 z-50 shadow-md flex justify-between items-center">
+    <span class="hidden md:inline"><span class="iconify inline mr-1" data-icon="ri:time-fill"></span> Lunes a Viernes 8:30am - 7:00pm | Sábados 9:00am - 5:00pm</span>
+    <span class="md:hidden">Atención Inmediata: Lun-Sáb</span>
+    <span class="uppercase tracking-wider flex items-center gap-1">
+      <span class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+      Alta demanda en cierres de mes
+    </span>
+  </div>
+
+  <nav class="bg-brand-black text-brand-white py-4 px-6 border-b border-white/10 relative z-40">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="https://www.tapimundoperu.com/" target="_blank" class="text-xl font-black tracking-tighter hover:text-brand-gold transition-colors">
+        TAPI <span class="text-brand-gold">MUNDO</span>
+      </a>
+      <div class="flex gap-4">
+        <a href="https://www.facebook.com/profile.php?id=61573733201641" target="_blank" class="hover:text-brand-gold transition-colors">
+          <span class="iconify text-xl" data-icon="ri:facebook-circle-fill"></span>
+        </a>
+        <a href="https://tapi-mundo.rdi.store/" target="_blank" class="hover:text-brand-gold transition-colors">
+          <span class="iconify text-xl" data-icon="ri:store-2-fill"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative bg-brand-black text-brand-white min-h-[650px] flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-pattern z-0"></div>
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?q=80&w=2070&auto=format&fit=crop" alt="Botellas Premium" class="w-full h-full object-cover opacity-30 mix-blend-luminosity">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 pt-10">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 border border-brand-gold/50 bg-brand-gold/10 px-3 py-1 rounded-full mb-6">
+          <span class="iconify text-brand-gold" data-icon="ri:shield-star-fill"></span>
+          <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Seguridad Industrial Certificada</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+          Tu destilado es arte.<br>
+          <span class="text-brand-gold">No dejes que una tapa barata lo arruine.</span>
+        </h1>
+        
+        <p class="text-gray-400 text-base md:text-xl mb-10 font-light leading-relaxed max-w-lg">
+          La oxidación y las fugas son los enemigos silenciosos de tu marca. Protege tu producción con tecnología <strong>Pilfer Saranex</strong> y <strong>Liners de Alta Densidad</strong>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/51921492814?text=Hola%20TAPI%20MUNDO,%20quiero%20proteger%20mi%20marca.%20Necesito%20asesor%C3%ADa." class="bg-brand-gold hover:bg-brand-goldHover text-brand-black font-extrabold py-4 px-8 rounded-sm shadow-[0_0_20px_rgba(252,189,2,0.3)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 w-full sm:w-auto">
+             <span class="iconify text-xl" data-icon="ri:whatsapp-fill"></span>
+             HABLAR CON UN EXPERTO
+          </a>
+          <a href="https://tapi-mundo.rdi.store/" target="_blank" class="border border-white/30 hover:border-brand-gold hover:text-brand-gold text-white font-bold py-4 px-8 rounded-sm transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
+            <span class="iconify" data-icon="ri:book-read-line"></span>
+            Ver Catálogo Digital
+          </a>
+        </div>
+        
+        <p class="mt-6 text-xs text-gray-500 flex items-center gap-2">
+          <span class="iconify text-brand-gold" data-icon="ri:checkbox-circle-fill"></span>
+          Stock disponible en Lima y envíos a provincia
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-20 bg-brand-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-black text-brand-black mb-6">¿Sabes qué protege realmente a tu producto?</h2>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Muchos productores pierden lotes enteros por elegir la tapa incorrecta. En <strong>TAPI MUNDO</strong> no solo vendemos tapas, vendemos ingeniería de conservación[cite: 1, 49].
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex gap-4 p-4 border-l-4 border-brand-black bg-white shadow-sm hover:border-brand-gold transition-colors">
+              <div class="mt-1"><span class="iconify text-2xl text-brand-gold" data-icon="ri:drop-fill"></span></div>
+              <div>
+                <h4 class="font-bold text-lg">Liner Estándar</h4>
+                <p class="text-sm text-gray-500">Ideal para productos de rotación rápida. Cierre hermético básico y económico. Perfecto para jugos, aguas y lácteos[cite: 71, 80].</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-4 border-l-4 border-brand-gold bg-gray-50 shadow-md">
+              <div class="mt-1"><span class="iconify text-2xl text-brand-gold" data-icon="ri:shield-keyhole-fill"></span></div>
+              <div>
+                <h4 class="font-bold text-lg">Tecnología Saranex (Premium)</h4>
+                <p class="text-sm text-gray-500">La barrera definitiva contra el oxígeno. Obligatorio para <strong>vinos y piscos de guarda</strong>. Evita que el alcohol se evapore o se avinagre.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:w-1/2 relative">
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-gold/20 rounded-full blur-2xl"></div>
+          <div class="bg-brand-black text-brand-white p-8 rounded-sm shadow-2xl relative z-10">
+            <h3 class="text-brand-gold font-bold text-xl mb-4 uppercase tracking-widest">El Dato Técnico</h3>
+            <p class="text-gray-300 italic mb-4">
+              "Una tapa Pilfer mal ajustada o con un liner incorrecto puede causar pérdidas del 15% en devoluciones."
+            </p>
+            <div class="border-t border-gray-700 pt-4 mt-4">
+              <p class="font-bold">Te asesoramos gratis.</p>
+              <p class="text-sm text-gray-400">Envíanos una foto de tu botella al WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-black text-brand-white relative">
+    <div class="absolute inset-0 bg-pattern z-0"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      
+      <div class="text-center mb-16">
+        <span class="text-brand-gold font-bold uppercase tracking-widest text-sm">Catálogo Industrial</span>
+        <h2 class="text-3xl md:text-5xl font-black mt-2">Soluciones Listas para Envasar</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-[#1a1a1a] border border-gray-800 p-6 hover:border-brand-gold transition-all duration-300 group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="iconify text-4xl text-gray-600 group-hover:text-brand-gold transition-colors" data-icon="mdi:bottle-wine"></span>
+            <span class="bg-red-900/50 text-red-400 text-[10px] font-bold px-2 py-1 uppercase border border-red-900">Alta Rotación</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Tapa Pilfer 30x60 (Saranex)</h3>
+          <p class="text-gray-400 text-sm mb-6 h-20 overflow-hidden">
+            Elegancia y protección máxima. Material Saranex para vinos y destilados que requieren larga vida en anaquel.
+          </p>
+          <ul class="text-xs text-gray-500 mb-6 space-y-2">
+            <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Medida Estándar: 30x60</li>
+            <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Barrera de Oxígeno</li>
+          </ul>
+          <a href="https://wa.me/51921492814?text=Me%20interesa%20la%20Tapa%20Pilfer%2030x60%20Saranex.%20Precio%20por%20caja." class="block w-full text-center bg-brand-white text-brand-black font-bold py-3 hover:bg-brand-gold transition-colors">
+            COTIZAR PRECIO
+          </a>
+        </div>
+
+        <div class="bg-[#1a1a1a] border border-gray-800 p-6 hover:border-brand-gold transition-all duration-300 group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="iconify text-4xl text-gray-600 group-hover:text-brand-gold transition-colors" data-icon="mdi:bottle-soda-classic"></span>
+            <span class="bg-blue-900/50 text-blue-400 text-[10px] font-bold px-2 py-1 uppercase border border-blue-900">Versátil</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Tapa Pilfer 30x35 (Liner)</h3>
+          <p class="text-gray-400 text-sm mb-6 h-20 overflow-hidden">
+            La todoterreno de la industria. Liner resistente para un sellado seguro en licores jóvenes, jarabes y aceites.
+          </p>
+          <ul class="text-xs text-gray-500 mb-6 space-y-2">
+            <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Medida: 30x35</li>
+            <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Liner Alta Resistencia</li>
+          </ul>
+          <a href="https://wa.me/51921492814?text=Cotizaci%C3%B3n%20Tapa%20Pilfer%2030x35%20Liner." class="block w-full text-center bg-brand-white text-brand-black font-bold py-3 hover:bg-brand-gold transition-colors">
+            COTIZAR PRECIO
+          </a>
+        </div>
+
+        <div class="bg-[#1a1a1a] border border-gray-800 p-6 hover:border-brand-gold transition-all duration-300 group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="iconify text-4xl text-gray-600 group-hover:text-brand-gold transition-colors" data-icon="mdi:leaf"></span>
+            <span class="bg-green-900/50 text-green-400 text-[10px] font-bold px-2 py-1 uppercase border border-green-900">Eco-Friendly</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Corchos Aglomerados</h3>
+          <p class="text-gray-400 text-sm mb-6 h-20 overflow-hidden">
+            Compromiso ecológico sin sacrificar calidad. No se desmoronan y son perfectos para sellado manual o semiautomático[cite: 25, 26].
+          </p>
+          <ul class="text-xs text-gray-500 mb-6 space-y-2">
+            <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Sostenible</li>
+            <li class="flex items-center gap-2"><span class="iconify text-brand-gold" data-icon="ri:check-line"></span> Alta densidad</li>
+          </ul>
+          <a href="https://wa.me/51921492814?text=Info%20sobre%20Corchos%20Aglomerados." class="block w-full text-center bg-brand-white text-brand-black font-bold py-3 hover:bg-brand-gold transition-colors">
+            COTIZAR PRECIO
+          </a>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://tapi-mundo.rdi.store/" target="_blank" class="inline-flex items-center text-brand-gold hover:text-white transition-colors border-b border-brand-gold pb-1 font-bold">
+          Ver todos los productos (31.5x24, 18x12 y más) <span class="iconify ml-2" data-icon="ri:arrow-right-line"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-gold text-brand-black relative overflow-hidden">
+    <div class="absolute top-0 right-0 p-20 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+    
+    <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-2/3">
+        <span class="bg-brand-black text-brand-gold text-xs font-bold px-3 py-1 uppercase tracking-widest mb-4 inline-block">Diferenciación</span>
+        <h2 class="text-3xl md:text-5xl font-black mb-6">Tu botella habla por ti.</h2>
+        <p class="text-lg font-medium mb-8 max-w-xl">
+          Personalizamos corchos, cápsulas y tapas Pilfer con impresión de alta definición. Combina tecnología avanzada y creatividad para diseños exclusivos.
+        </p>
+        <div class="grid grid-cols-2 gap-4 max-w-md mb-8">
+          <div class="flex items-center gap-2">
+            <span class="iconify text-2xl" data-icon="ri:pantone-fill"></span>
+            <span class="font-bold text-sm">Colores Corporativos</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="iconify text-2xl" data-icon="ri:printer-fill"></span>
+            <span class="font-bold text-sm">Impresión HD</span>
+          </div>
+        </div>
+        <a href="https://wa.me/51921492814?text=Quiero%20dise%C3%B1ar%20mi%20propia%20tapa%20personalizada." class="bg-brand-black text-white hover:bg-white hover:text-brand-black font-bold py-4 px-10 rounded-sm shadow-xl transition-all inline-flex items-center gap-2">
+          <span class="iconify" data-icon="ri:brush-fill"></span>
+          COTIZAR BRANDING
+        </a>
+      </div>
+      <div class="md:w-1/3 flex justify-center">
+        <div class="w-64 h-64 border-4 border-brand-black rounded-full flex items-center justify-center relative bg-white/20 backdrop-blur-sm">
+          <span class="iconify text-8xl text-brand-black opacity-80" data-icon="ri:vip-crown-2-fill"></span>
+          <div class="absolute bottom-4 bg-brand-black text-brand-gold text-xs font-bold px-3 py-1">SERVICIO VIP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-brand-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-black text-brand-black mb-12 uppercase">Logística sin dolores de cabeza</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6">
+          <span class="iconify text-4xl text-brand-gold mb-4 mx-auto" data-icon="ri:map-pin-time-fill"></span>
+          <h4 class="font-bold text-lg mb-2">Seguimiento Real</h4>
+          <p class="text-sm text-gray-600">Mantente informado de la ubicación exacta de tu pedido.</p>
+        </div>
+        <div class="p-6 border-l md:border-l border-gray-200">
+          <span class="iconify text-4xl text-brand-gold mb-4 mx-auto" data-icon="ri:truck-fill"></span>
+          <h4 class="font-bold text-lg mb-2">Envíos a Provincia</h4>
+          <p class="text-sm text-gray-600">Gestionamos envíos rápidos para que tu producción no se detenga.</p>
+        </div>
+        <div class="p-6 border-l md:border-l border-gray-200">
+          <span class="iconify text-4xl text-brand-gold mb-4 mx-auto" data-icon="ri:customer-service-2-fill"></span>
+          <h4 class="font-bold text-lg mb-2">Soporte Dedicado</h4>
+          <p class="text-sm text-gray-600">Resolvemos tus dudas técnicas antes de la compra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-brand-black text-gray-500 py-12 border-t border-gray-800 text-sm">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <div class="col-span-1 md:col-span-2">
+        <a href="#" class="text-2xl font-black text-brand-white block mb-4">TAPI <span class="text-brand-gold">MUNDO</span></a>
+        <p class="max-w-xs mb-4">Seguridad y calidad en cada sello. Expertos en insumos para la industria alimentaria y de licores.</p>
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com/profile.php?id=61573733201641" target="_blank" class="text-white hover:text-brand-gold transition-colors">
+            <span class="iconify text-2xl" data-icon="ri:facebook-fill"></span>
+          </a>
+          <a href="https://tapi-mundo.rdi.store/" target="_blank" class="text-white hover:text-brand-gold transition-colors">
+            <span class="iconify text-2xl" data-icon="ri:store-2-fill"></span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="text-brand-white font-bold uppercase mb-4 tracking-wider">Contacto</h5>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2">
+            <span class="iconify text-brand-gold mt-1" data-icon="ri:whatsapp-fill"></span>
+            <a href="https://wa.me/51921492814" class="hover:text-white transition-colors">+51 921 492 814</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="iconify text-brand-gold mt-1" data-icon="ri:mail-fill"></span>
+            <a href="mailto:ventas@tapimundoperu.com" class="hover:text-white transition-colors">ventas@tapimundoperu.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-brand-white font-bold uppercase mb-4 tracking-wider">Horario</h5>
+        <ul class="space-y-2">
+          <li class="flex justify-between"><span>Lun - Vie:</span> <span class="text-white">8:30am - 7:00pm</span></li>
+          <li class="flex justify-between"><span>Sábados:</span> <span class="text-white">9:00am - 5:00pm</span></li>
+          <li class="flex justify-between text-red-500"><span>Domingo:</span> <span>Cerrado</span></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="text-center mt-12 pt-8 border-t border-gray-800 text-xs text-gray-600">
+      &copy; 2025 Tapi Mundo Perú. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51921492814?text=Hola,%20vengo%20de%20la%20web%20y%20necesito%20info." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform flex items-center justify-center animate-bounce">
+    <span class="iconify text-3xl" data-icon="ri:whatsapp-fill"></span>
+  </a>
+
+  <div id="sales-toast" class="hidden fixed bottom-24 right-6 bg-brand-white border-l-4 border-brand-gold p-4 shadow-2xl rounded-sm z-40 max-w-xs items-center gap-3">
+    <div class="bg-brand-gold/20 p-2 rounded-full text-yellow-700">
+      <span class="iconify text-lg" data-icon="ri:notification-3-fill"></span>
+    </div>
+    <div>
+      <p class="text-xs font-bold text-brand-black">Último pedido despachado</p>
+      <p class="text-[10px] text-gray-600">Cliente de <span class="font-bold">Ica</span> compró 5 millares de <span class="font-bold">Tapas Pilfer</span>.</p>
+    </div>
+  </div>
+
+  <script>
+    // Lógica para el Toast de Ventas
+    const toast = document.getElementById('sales-toast');
+    
+    // Aparece a los 3 segundos de entrar
+    setTimeout(() => {
+      toast.classList.remove('hidden');
+      toast.classList.add('toast-active');
+      
+      // Desaparece 5 segundos después
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(20px)';
+        toast.style.transition = 'all 0.5s ease';
+      }, 5000);
+    }, 3000);
+  </script>
+
+</body>
+</html>
